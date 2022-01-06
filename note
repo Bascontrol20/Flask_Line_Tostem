@@ -1,0 +1,14 @@
+# python -m venv env
+# pip install flask requests Flask-SQLAlchemy 
+# python -m pip install --upgrade pip
+
+# .tables
+# select * from linenotify
+
+
+# from apprun import db
+# db.create_all()
+# from apprun import Linenotify
+# line1 = Linenotify(linegroup='G1',linemsg='M1',linetoken='CzvrfaessFd8oV3E5WPEFdyI8yfhVN5IIBY6jfOHM0M',lineplc='M10000')
+# db.session.add(line1)
+# db.session.commit()
