@@ -1,0 +1,34 @@
+C-INT how to doc comment
+
+1. ควรมี Flow การตั้งค่าบอกแบบ One sheet guideline 
+
+
+2. ควรมีหน้ารวม Specification ด้วย
+
+
+3. ควรบอกว่าต้องเซ็ท IP ของอะไรยังไงบ้าง
+	- PC
+	- CPU					192.168.2.81		=> Local
+	- C-INT port 1		192.168.1.109	=> Internet
+	- C-INT port 2		192.168.2.109	=> Local
+	
+4. IP address of CPU should be able to set, from web UI, (CH1 of C-INT, 192.168.1.109:8888)
+
+
+5. ควรมีบอกขั้นตอนการ Invite notification account ไปที่ Group ด้วย
+
+
+
+6. C-INT IP 192.168.1.10 ไม่เวิร์ค
+	ON M10000 แต่ไม่มี Feedback กลับมา
+	
+	ลองเปลี่ยนเป็น 109
+	หรือจะเป็นที่ Internet ?
+	
+	IP ต้องเหมือนตัวอย่างเท่านั้นเลยหนิ
+	
+
+
+
+FactoryA
+wDuGrQAUaUscpSbGL1LWlFEZgTBfcTYnTd8fpzUSBmv
