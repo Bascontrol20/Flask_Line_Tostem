@@ -114,8 +114,11 @@ def plc_notify():
         slmp = pymcprotocol.Type3E()
         # Set PLC type
         slmp = pymcprotocol.Type3E(plctype="iQ-R")
+        ip1 = "192.168.1.81"
+        port_plc = 8880
         # Connect PLC
-        slmp.connect("192.168.1.81", 8880)# insert IP Address
+        # slmp.connect("192.168.1.81", 8880)# insert IP Address
+        slmp.connect(ip1,port_plc)# insert IP Address
 
         
         while True:
@@ -461,8 +464,8 @@ if __name__ == '__main__':
     t1.setDaemon(True)
     t1.start()
     app.run(host="0.0.0.0",port="8888",debug=True)
-    while True:
+    # while True:
         
-        pass
+    #     pass
     
    

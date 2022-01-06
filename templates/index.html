@@ -3,6 +3,25 @@
 <link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
 
 {% block body %}
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col md-12">
+
+            <h2> PLC IP ADDRESS
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="IP Address:Port"
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                </div>
+            </h2>
+
+        </div>
+    </div>
+</div>
+
 <div class="container">
 
     <div class="row">
@@ -11,15 +30,17 @@
 
 
 
-            <h2>Line Message List 
-                
+            <h2>LINE MESSAGE LIST
+
+
+
+                <button type="button" class="btn btn-success  pull-right" data-toggle="modal" data-target="#myModal">Add
+                    Line Data</button>
+
                 <button type="button" class="btn btn-success  pull-right" data-toggle="modal"
-                    data-target="#myModal">Add Line Data</button>
-                
-                <button type="button" class="btn btn-success  pull-right" data-toggle="modal"
-                    data-target="#myModal">Aalrm History</button>
-                
-                </h2>
+                    data-target="#myModal">Alarm History</button>
+
+            </h2>
 
 
 
@@ -107,21 +128,24 @@
                             <div class="modal-body">
 
 
-                                <form action="{{ url_for('update') }}" method="POST"> 
-                                
+                                <form action="{{ url_for('update') }}" method="POST">
+
                                     <div class="form-group">
 
                                         <label>Group Name:</label>
                                         <input type="hidden" name="id" value="{{row.id}}">
-                                        <input type="text" class="form-control" name="groupname" value="{{row.linegroup}}">
+                                        <input type="text" class="form-control" name="groupname"
+                                            value="{{row.linegroup}}">
                                     </div>
                                     <div class="form-group">
                                         <label>Line Message:</label>
-                                        <input type="text" class="form-control" name="linemessage" value="{{row.linemsg}}">
+                                        <input type="text" class="form-control" name="linemessage"
+                                            value="{{row.linemsg}}">
                                     </div>
                                     <div class="form-group">
                                         <label>Line Token URL:</label>
-                                        <input type="text" class="form-control" name="linetoken" value="{{row.linetoken}}">
+                                        <input type="text" class="form-control" name="linetoken"
+                                            value="{{row.linetoken}}">
                                     </div>
                                     <div class="form-group">
                                         <label>PLC Tag:</label>
@@ -151,7 +175,7 @@
                 </div>
 
 
-                {% endfor  %}
+                {% endfor %}
 
 
                 </tbody>
